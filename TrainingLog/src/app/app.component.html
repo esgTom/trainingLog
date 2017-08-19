@@ -1,16 +1,9 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{title}}!
-  </h1>  
+<training-log-nav></training-log-nav>
+
+<div class="container">
+  <div class="starter-template">
+    <router-outlet></router-outlet>
+  </div>
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a [routerLink]="''">Home</a></h2>
-    <h2><a [routerLink]="'activity'">Recent activity</a></h2>
-  </li>
-</ul>
 
-<router-outlet></router-outlet>
-
+<training-log-footer></training-log-footer>
