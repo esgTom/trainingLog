@@ -1,0 +1,50 @@
+
+<div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">{{ activityOperation }} Activity Detail</h4>
+    <button type="button" class="close" aria-label="Close" (click)="bsModalRef.hide()">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body">
+    
+    <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+  
+        <div class="form-group col-md-4">
+          <label for="activityCategory">Activity Category:</label>
+          <select formControlName="activityCategory"
+              class="form-control" 
+              (change)="onActivityCategoryChange()">
+              <option *ngFor="let activityCategory of activityCategories" [ngValue]="activityCategory.CodeId">
+                  {{ activityCategory.Description }}
+              </option>
+          </select>
+        </div>
+      
+        <div class="form-group  col-md-4" >
+          <label for="activityType">Activity:</label>
+          <select formControlName="activityType"
+              class="form-control">
+              <option *ngFor="let activityType of activityTypes" [ngValue]="activityType.Code">
+                  {{ activityType.Description }}
+              </option>
+          </select>
+        </div>
+      
+        <div class="form-group col-md-4">
+          <label for="activityDuration">Activity Category:</label>
+          <input type="text" formControlName="activityDuration" class="form-control" id="activityDuration" placeholder="duration">
+        </div>
+      
+        <div class="form-group col-md-12">
+          <button type="button" type="submit" class="btn btn-outline-dark" [disabled]="!editForm.valid">Save</button>
+          <button type="button" class="btn btn-outline-dark ml-2" (click)="bsModalRef.hide()">Cancel</button>
+        </div>
+            
+      </form>
+
+
+</div>
+<div class="modal-footer">
+    Put something interesting here?
+</div>
+

@@ -1,0 +1,8 @@
+<div>
+    <span class="p-2">Month:</span>
+    <select name="ddlActivityMonth"
+        [(ngModel)]="currentMonth"
+        (change)="onMonthChange()">
+        <option *ngFor="let month of calendarMonths" value="{{ month.monthNumber}}" > {{ month.monthName }} </option>
+    </select>
+</div>
