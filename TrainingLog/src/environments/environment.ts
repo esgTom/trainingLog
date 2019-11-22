@@ -4,5 +4,11 @@
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  Urls: {
+    // activityApiUrl: 'http://localhost:4200/api/activity/',
+    trainingLogAPIActivities: 'http://localhost/TrainingLogAPI/api/activity/',
+    trainingLogAPIEvents: 'http://localhost/TrainingLogAPI/api/event/',
+    // inMemoryActivityApiUrl: 'api/'
+  }
 };

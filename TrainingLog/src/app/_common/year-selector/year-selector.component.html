@@ -1,0 +1,8 @@
+<div>
+    <span class="p-2">Year:</span>
+    <select name="ddlActivityYear"
+        [(ngModel)]="currentYear"
+        (change)="onYearChange()">
+        <option *ngFor="let calendarYear of calendarYears" value="{{ calendarYear }}" > {{ calendarYear }} </option>
+    </select>
+</div>

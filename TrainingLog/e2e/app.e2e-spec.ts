@@ -1,14 +1,14 @@
-import { TrainingLogPage } from './app.po';
+import { CoreUIPage } from './app.po';
 
-describe('training-log App', () => {
-  let page: TrainingLogPage;
+describe('core-ui App', function() {
+  let page: CoreUIPage;
 
   beforeEach(() => {
-    page = new TrainingLogPage();
+    page = new CoreUIPage();
   });
 
-  it('should display welcome message', () => {
+  it('should display footer containing creativeLabs', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to app!');
+    expect(page.getParagraphText()).toContain('creativeLabs');
   });
 });
